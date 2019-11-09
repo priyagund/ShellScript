@@ -1,5 +1,16 @@
-#!/bin/bash -x
-empRatePerHr=10
+#!/bin/bash -x 
+if (( $RANDOM %2 -eq 1))
+empRatePer=10
+R=$(( $RANDOM ))
+result=$(( $R % 2 ))
+then
+echo "Employee present"
+elif [ $result -eq 0]
+echo "Employye parttime"
+else
+echo "employee is absent"
+fi
+=======RatePerHr=10
 random=$((RANDOM))
 result=$(( $random % 2 ))
 if [ $result -eq 1 ]
@@ -21,4 +32,5 @@ else
 	 empHr=0;
 fi
 
+>>>>>>> master
 

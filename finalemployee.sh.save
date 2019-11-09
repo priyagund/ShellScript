@@ -1,12 +1,11 @@
+
 #!/bin/bash -x
 empRatePerHr=10
 random=$((RANDOM))
 result=$(( $random % 2 ))
 if [ $result -eq 1 ]
 then
-
-	
-	empHr=8
+======pHr=8
 	echo "Employee is present:"
 	
 elif  [ $result -eq 0 ]
@@ -21,4 +20,5 @@ else
 	 empHr=0;
 fi
 
+>>>>>>> a95aa8e9c473d404349d06a4101b8f6f025f10ab
 
