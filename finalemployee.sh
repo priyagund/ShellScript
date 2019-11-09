@@ -1,9 +1,8 @@
 #!/bin/bash -x
 if (( $RANDOM %2 -eq 1))
 then
-echo "Employee present"
+echo "present"
 else
-echo "employee is absent"
-
-
+echo "absent"
+fi
 
