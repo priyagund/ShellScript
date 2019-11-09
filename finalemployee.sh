@@ -1,7 +1,7 @@
 #!/bin/bash -x
 empRatePerHr=10
-R=$((RANDOM))
-result=$(( $R % 2 ))
+random=$((RANDOM))
+result=$(( $random % 2 ))
 if [ $result -eq 1 ]
 then
 	
