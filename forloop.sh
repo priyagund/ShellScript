@@ -1,32 +1,33 @@
 #!/bin/bash -x
 empRatePerHr=10
-isFullTime=0
+isFullTime=2
 isPartTime=1
-totalhours=0
+counter=0
 
-function myfun() {
-   while [ $totalhours -le 51 ]
-   do
-   empCheck=$(( $RANDOM % 3 ))
-   case $empCheck in 
-   $isFullTime )
-      empHr=8;;
-   $isPartTime )
-       empHr=4;;
-    * )     
-   empHr=0;;
-   esac
-  totalhours=$(( $totalhours + $empHr ))
-  done
+function Hours() {
+reminder=$(( $RANDOM % 3 ))
+if [ $reminder -eq $isFullTime ]
+then
+	hours=8
+elif [ $reminder -eq $isPartTime ]
+then 
+	hours=4
+else
+	hours=0
 }
-for(( days=1; days<=20 ; days++))
-  do
- result=$( myfun )
- echo  ${result[@]}
+
+function var() {
+for(( days=1; days<=20 ; days++))  do
+ hour=$( Hours )
+salaryPerDay=$(( $hour * empRatePerHr ))
+result[(( counter++))]=$total
+done
+echo ${result[@]}
+}
+ result=$( var )
  echo $result
- done
-printf "\n"
+ 
 
-
+prntf "\n"
 
 
