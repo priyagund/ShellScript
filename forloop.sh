@@ -1,7 +1,28 @@
 #!/bin/bash -x
-for(( counter=1; counter<5; counter++ ))
-do
+empRatePerHr=10
+isFullTime=0
+isPartTime=1
+totalhours=0
 
-  echo -n "$counter"
+function myfun() {
+while [ $totalhours -le 51 ]
+do
+empCheck=$(( $RANDOM % 3 ))
+ case $empCheck in 
+$isFullTime )
+      empHr=8;;
+$isPartTime )
+      empHr=4;;
+* )
+   empHr=0;;
+esac
+totalhours=$(( $totalhours + $empHr ))
 done
-  printf "\n"
+}
+git
+gi
+result=$( myfun )
+echo $result
+
+
+
