@@ -5,26 +5,26 @@ isPartTime=1
 totalhours=0
 
 function myfun() {
-while [ $totalhours -le 51 ]
-do
-empCheck=$(( $RANDOM % 3 ))
- case $empCheck in 
-$isFullTime )
+   while [ $totalhours -le 51 ]
+   do
+   empCheck=$(( $RANDOM % 3 ))
+   case $empCheck in 
+   $isFullTime )
       empHr=8;;
-$isPartTime )
-      empHr=4;;
-* )
+   $isPartTime )
+       empHr=4;;
+    * )     
    empHr=0;;
-esac
-totalhours=$(( $totalhours + $empHr ))
-done
+   esac
+  totalhours=$(( $totalhours + $empHr ))
+  done
 }
 for(( days=1; days<=20 ; days++))
-do
-result=$( myfun )
-echo  ${result[@]}
-echo $result
-done
+  do
+ result=$( myfun )
+ echo  ${result[@]}
+ echo $result
+ done
 printf "\n"
 
 
