@@ -19,8 +19,7 @@ esac
 totalhours=$(( $totalhours + $empHr ))
 done
 }
-git
-gi
+
 result=$( myfun )
 echo $result
 
