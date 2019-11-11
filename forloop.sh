@@ -19,10 +19,14 @@ esac
 totalhours=$(( $totalhours + $empHr ))
 done
 }
-git
-gi
+for(( days=1; days<=20 ; days++))
+do
 result=$( myfun )
+echo  ${result[@]}
 echo $result
+done
+printf "\n"
+
 
 
 
