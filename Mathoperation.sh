@@ -16,4 +16,4 @@ operations[Result4]=$(( ( $firstNumber + $secondNumber ) / $thirdNumber  ))
 
 array=($Result1 $Result2 $Result3 $Result4)
 
-echo   $(printf "%s\n" ${operations[@]} | sort -nr )
+echo   $(printf "%s\n" ${operations[@]} | sort -n)
