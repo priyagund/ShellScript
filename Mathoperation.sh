@@ -1,4 +1,4 @@
-
+./
 #!/bin/bash -x
 
 echo enter firstNumber
@@ -14,5 +14,4 @@ operations[Result2]=$(( ( $firstNumber + $secondNumber ) * $thirdNumber  ))
 operations[Result3]=$(( ( $firstNumber * $secondNumber ) + $thirdNumber  ))
 operations[Result4]=$(( ( $firstNumber + $secondNumber ) / $thirdNumber  ))
 
-echo ${operations[@]}
-
+echo   "key : ${!operations[@]} value : ${operations[@]}"

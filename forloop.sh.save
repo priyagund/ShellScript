@@ -1,0 +1,10 @@
+ #!/bin/bash -x
+empRatePerHr=10
+isFullTime=0
+isPartTime=1
+totalempHr=0
+
+
+
+
+
